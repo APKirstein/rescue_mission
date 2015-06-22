@@ -46,7 +46,4 @@ group :development, :test do
   # Capybara
   gem 'capybara'
 
-  # FactoryGirl
-  gem 'factory_girl_rails'
-
 end
