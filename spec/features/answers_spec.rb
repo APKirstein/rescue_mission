@@ -7,11 +7,13 @@ feature 'user answers a question', %Q{
 } do
 
   scenario 'user fills an answer form and submits it' do
-    visit question_path
+    question = FactoryGirl.create(:question)
 
-    fill_in "Answer", with: answer.body
+    visit question_path(question)
+
+    fill_in "answer_body", with: "This is an answer"
     click_button "Submit Answer"
 
-    expect(page).to have_content (answer.body)
+    expect(page).to have_content ("This is an answer")
   end
 end

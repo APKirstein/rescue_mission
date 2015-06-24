@@ -1,15 +1,15 @@
 <h1><%= @question.title %></h1>
-
 <p><%= @question.description %></p>
 
+<%= form_for [ @question, @answer ] do |f| %>
 
-<%= form_for @answer do |f| %>
-
-  <%= f.label :body %>
+  <%= f.label "Answer" %>
   <%= f.text_field :body %>
 
   <%= f.submit "Submit Answer" %>
 <% end %>
+
+<%= link_to "Update Question", edit_question_path %>
 
 <ul>
   <% unless @answers.first.nil? %>

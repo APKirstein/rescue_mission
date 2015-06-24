@@ -1,23 +1,34 @@
 class AnswersController < ApplicationController
 
-  def new
-    @answer = Answer.new
-  end
+  # def index
+  #   @question = Question.find(params[:question_id])
+  #   @answer = Answer.where(question_id: params[:question_id])
+  #   @answers = @question.answers
+  # end
 
-  def show
-    @question_answers = Answer.all
-  end
+  # def new
+  #   @question = Question.find(params[:question_id])
+  #   @answer = Answer.new
+  # end
+
+  # def show
+  #   @answer = Answer.find(params[:id])
+  #   @question = @answer.question
+  # end
 
   def create
     @errors = Array.new
-    @answer = Answer.create!(answer_params)
+    @question = Question.find(params[:question_id])
+    @answer = Answer.new(answer_params)
+    @answer.question = @question
+
     if @answer.save
-      redirect_to root_path
+      redirect_to question_path(@question)
     else
       @answer.errors.messages.each do |key, error|
         @errors << (key.to_s + " " + error.first)
       end
-      redirect_to questions_path
+      redirect_to question_path(@question)
     end
   end
 

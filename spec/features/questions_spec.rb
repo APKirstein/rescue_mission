@@ -62,3 +62,35 @@ feature 'user posts a question', %Q{
     expect(page).to have_content("Questions")
   end
 end
+
+# As a user
+# I want to edit a question
+# So that I can correct any mistakes or add updates
+#
+# Acceptance Criteria
+#
+# - I must provide valid information
+# - I must be presented with errors if I fill out the form incorrectly
+# - I must be able to get to the edit page from the question details page
+
+
+feature 'user edits a question', %Q{
+  As a user
+  I want to edit a question
+  So that I can correct any mistakes or add updates
+} do
+
+  scenario 'user edits the submitted question' do
+    question = FactoryGirl.create(:question)
+
+    visit question_path(question)
+    click_link "Update Question"
+    fill_in "Title", with: question.title
+    fill_in "Description", with: question.description
+    click_button "Submit Question"
+
+
+    expect(page).to have_content(question.title)
+
+  end
+end
