@@ -1,3 +1,22 @@
 <h1><%= @question.title %></h1>
 
 <p><%= @question.description %></p>
+
+
+<%= form_for @answer do |f| %>
+
+  <%= f.label :body %>
+  <%= f.text_field :body %>
+
+  <%= f.submit "Submit Answer" %>
+<% end %>
+
+<ul>
+  <% unless @answers.first.nil? %>
+    <% @answers.each do |answer| %>
+      <li><%= answer.body %></li>
+    <% end %>
+  <% end %>
+</ul>
+
+<a href= "/questions" >Back to Questions</a>

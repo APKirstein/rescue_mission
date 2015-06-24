@@ -46,4 +46,11 @@ group :development, :test do
   # Capybara
   gem 'capybara'
 
+  # Factory Girl
+  gem 'factory_girl_rails'
+
+  #TODO: add factory_girl
+  #TODO: create spec/support/factories.rb - define your factories here
+  #TODO: require the support file in the rails_helper.rb
+
 end
