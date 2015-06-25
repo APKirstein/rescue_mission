@@ -46,6 +46,12 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def destroy
+    @question = Question.find(params[:id]).destroy
+    flash.notice = "Question Deleted"
+    redirect_to questions_path
+  end
+
   protected
   def question_params
     params.require(:question).permit(:title, :description)

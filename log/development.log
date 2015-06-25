@@ -8408,3 +8408,1287 @@ Processing by QuestionsController#edit as HTML
   [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 3]]
   Rendered questions/edit.html.erb within layouts/application (3.1ms)
 Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-06-25 12:45:22 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (1.3ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 261ms (Views: 249.7ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-06-25 12:45:23 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-06-25 12:45:23 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-25 12:45:23 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-06-25 12:45:23 -0400
+
+
+Started GET "/questions/2" for ::1 at 2015-06-25 12:45:25 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mAnswer Load (0.7ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" ASC LIMIT 1  [["question_id", 2]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 2]]
+  Rendered questions/show.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 72ms (Views: 41.6ms | ActiveRecord: 3.8ms)
+
+
+Started DELETE "/questions" for ::1 at 2015-06-25 12:45:39 -0400
+
+ActionController::RoutingError (No route matches [DELETE] "/questions"):
+  actionpack (4.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/NocturnalReign/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/NocturnalReign/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/NocturnalReign/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (6.0ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (16.8ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (38.1ms)
+
+
+Started DELETE "/questions" for ::1 at 2015-06-25 12:45:45 -0400
+
+ActionController::RoutingError (No route matches [DELETE] "/questions"):
+  actionpack (4.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/NocturnalReign/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/NocturnalReign/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/NocturnalReign/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (4.5ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (13.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (27.2ms)
+
+
+Started DELETE "/questions" for ::1 at 2015-06-25 12:46:02 -0400
+
+ActionController::RoutingError (No route matches [DELETE] "/questions"):
+  actionpack (4.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/NocturnalReign/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/NocturnalReign/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/NocturnalReign/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (4.5ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (12.8ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (27.2ms)
+
+
+Started GET "/questions/2" for ::1 at 2015-06-25 12:48:27 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" ASC LIMIT 1[0m  [["question_id", 2]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 2]]
+  Rendered questions/show.html.erb within layouts/application (49.2ms)
+Completed 200 OK in 87ms (Views: 68.5ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-06-25 12:48:27 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-25 12:48:27 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-06-25 12:48:27 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-06-25 12:48:27 -0400
+
+
+Started DELETE "/questions/2" for ::1 at 2015-06-25 12:48:29 -0400
+
+AbstractController::ActionNotFound (The action 'destroy' could not be found for QuestionsController):
+  actionpack (4.2.2) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.2) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.2) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.2) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.2) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.2) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.2) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.2) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.2) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.2) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.2) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/NocturnalReign/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/NocturnalReign/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/NocturnalReign/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.text.erb (0.5ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (19.4ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (40.3ms)
+
+
+Started GET "/questions/2" for ::1 at 2015-06-25 12:52:01 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" ASC LIMIT 1  [["question_id", 2]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 2]]
+  Rendered questions/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 48ms (Views: 28.9ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-06-25 12:52:01 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-25 12:52:01 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-06-25 12:52:01 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-06-25 12:52:01 -0400
+
+
+Started DELETE "/questions/2" for ::1 at 2015-06-25 12:52:04 -0400
+
+AbstractController::ActionNotFound (The action 'destroy' could not be found for QuestionsController):
+  actionpack (4.2.2) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.2) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.2) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.2) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.2) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.2) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.2) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.2) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.2) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.2) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.2) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.2) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/NocturnalReign/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/NocturnalReign/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/NocturnalReign/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.text.erb (0.4ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (13.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (28.5ms)
+
+
+Started DELETE "/questions/2" for ::1 at 2015-06-25 12:53:00 -0400
+Processing by QuestionsController#destroy as JS
+  Parameters: {"authenticity_token"=>"Zlk9P/WugaHGwQc8OgR7XWvYJdM2glO/G0/liPP7gfJnu8dmkZzsBxN/zmfSABMSJg0DKp6fDj2rOUnViaGvFw==", "id"=>"2"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 2]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/questions
+Completed 302 Found in 12ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/questions" for ::1 at 2015-06-25 12:53:00 -0400
+Processing by QuestionsController#index as JS
+  [1m[35mQuestion Load (0.7ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/questions/2" for ::1 at 2015-06-25 12:54:09 -0400
+Processing by QuestionsController#destroy as JS
+  Parameters: {"authenticity_token"=>"Zlk9P/WugaHGwQc8OgR7XWvYJdM2glO/G0/liPP7gfJnu8dmkZzsBxN/zmfSABMSJg0DKp6fDj2rOUnViaGvFw==", "id"=>"2"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 404 Not Found in 8ms (ActiveRecord: 2.9ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Question with 'id'=2):
+  app/controllers/questions_controller.rb:50:in `destroy'
+
+
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (20.7ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (17.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (38.1ms)
+
+
+Started GET "/questions/2" for ::1 at 2015-06-25 12:54:11 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Question with 'id'=2):
+  app/controllers/questions_controller.rb:8:in `show'
+
+
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.9ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (12.6ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (26.4ms)
+
+
+Started GET "/questions" for ::1 at 2015-06-25 12:54:17 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 28ms (Views: 27.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/6" for ::1 at 2015-06-25 12:54:23 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" ASC LIMIT 1[0m  [["question_id", 6]]
+  Rendered questions/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 29ms (Views: 19.5ms | ActiveRecord: 2.4ms)
+
+
+Started DELETE "/questions/6" for ::1 at 2015-06-25 12:54:26 -0400
+Processing by QuestionsController#destroy as JS
+  Parameters: {"authenticity_token"=>"hIrr3DLPT2ePmnXxnR+Bnsc/FxYRXtKpQmW4xRY6PtWFaBGFVv0iwVokvKp1G+nRiuox77lDjyvyExSYbGAQMA==", "id"=>"6"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 6]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/questions
+Completed 302 Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/questions" for ::1 at 2015-06-25 12:54:26 -0400
+Processing by QuestionsController#index as JS
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions" for ::1 at 2015-06-25 12:54:40 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questions/5" for ::1 at 2015-06-25 12:54:42 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" ASC LIMIT 1[0m  [["question_id", 5]]
+  Rendered questions/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/questions" for ::1 at 2015-06-25 12:54:44 -0400
+
+ActionController::RoutingError (No route matches [DELETE] "/questions"):
+  actionpack (4.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/NocturnalReign/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/NocturnalReign/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/NocturnalReign/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (4.8ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (13.6ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (28.9ms)
+
+
+Started GET "/questions" for ::1 at 2015-06-25 12:54:47 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questions/5" for ::1 at 2015-06-25 12:54:48 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" ASC LIMIT 1  [["question_id", 5]]
+  Rendered questions/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/questions" for ::1 at 2015-06-25 12:54:51 -0400
+
+ActionController::RoutingError (No route matches [DELETE] "/questions"):
+  actionpack (4.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.3) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/NocturnalReign/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/NocturnalReign/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/NocturnalReign/.rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (4.6ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (12.1ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (26.3ms)
+
+
+Started GET "/questions" for ::1 at 2015-06-25 12:54:52 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questions/new" for ::1 at 2015-06-25 12:58:53 -0400
+Processing by QuestionsController#new as HTML
+  Rendered questions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 20ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions" for ::1 at 2015-06-25 12:58:54 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questions/5" for ::1 at 2015-06-25 12:58:56 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 5]]
+  Rendered questions/show.html.erb within layouts/application (17.8ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined local variable or method `question' for #<#<Class:0x007fdf237aec48>:0x007fdf233f6a88>):
+    10: <% end %>
+    11: 
+    12: <%= link_to "Update Question", edit_question_path %>
+    13: <%= button_to("Delete Question", {:controller => :questions, :action => :destroy, :id => question.id},  method: :delete, remote: true, data: { confirm: "Are you sure?", disable_with: 'loading...' }) %>
+    14: 
+    15: <ul>
+    16:   <% unless @answers.first.nil? %>
+  app/views/questions/show.html.erb:13:in `_app_views_questions_show_html_erb___1822234391903407726_70298172894140'
+
+
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/console.js.erb within layouts/javascript (13.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/NocturnalReign/.gem/ruby/2.1.5/gems/web-console-2.1.3/lib/web_console/templates/index.html.erb (29.1ms)
+
+
+Started GET "/questions/new" for ::1 at 2015-06-25 12:59:24 -0400
+Processing by QuestionsController#new as HTML
+  Rendered questions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions" for ::1 at 2015-06-25 12:59:25 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/5" for ::1 at 2015-06-25 12:59:26 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" ASC LIMIT 1[0m  [["question_id", 5]]
+  Rendered questions/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/questions/5" for ::1 at 2015-06-25 12:59:29 -0400
+Processing by QuestionsController#destroy as JS
+  Parameters: {"authenticity_token"=>"57Tq2bV0SzsWDfXOWQ7vrHNaJnGHAx2TGdqY2ykXW/nmVhCA0UYmncOzPJWxCofjPo8AiC8eQBGprDSGU011HA==", "id"=>"5"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 5]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/questions
+Completed 302 Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/questions" for ::1 at 2015-06-25 12:59:29 -0400
+Processing by QuestionsController#index as JS
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions" for ::1 at 2015-06-25 12:59:39 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questions" for ::1 at 2015-06-25 13:00:56 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.6ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 27ms (Views: 20.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-06-25 13:00:56 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-06-25 13:00:56 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-25 13:00:56 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-06-25 13:00:56 -0400
+
+
+Started GET "/questions/new" for ::1 at 2015-06-25 13:00:57 -0400
+Processing by QuestionsController#new as HTML
+  Rendered questions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions" for ::1 at 2015-06-25 13:00:58 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questions/4" for ::1 at 2015-06-25 13:00:59 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" ASC LIMIT 1[0m  [["question_id", 4]]
+  Rendered questions/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 32ms (Views: 22.0ms | ActiveRecord: 2.5ms)
+
+
+Started DELETE "/questions/4" for ::1 at 2015-06-25 13:01:02 -0400
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tnK/XXoASyVgOMnjyWvzo0OfDL5VKx7ui7IfktLaA5C3kEUEHjImg7WGALghb5vsDkoqR/02Q2w7xLPPqIAtdQ==", "id"=>"4"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 4]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/questions
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/questions" for ::1 at 2015-06-25 13:01:02 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questions/new" for ::1 at 2015-06-25 13:01:38 -0400
+Processing by QuestionsController#new as HTML
+  Rendered questions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 21ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/questions" for ::1 at 2015-06-25 13:01:44 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1c0wB3wem4fwVfdoeVaE46OJzxVyC7mw3QustfVUKVTUL8peGCz2ISXrPjORUuys7lzp7NoW5DJtfQDojw4HsQ==", "question"=>{"title"=>"Blahaalhdslafhodsofahdohiohi", "description"=>"saofhdohaf9pudhsipufahi9dpgfiasdghipfghadsigfidsgaiufgdiafgidghfiagsdiofhsz"}, "commit"=>"Submit Question"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mQuestion Exists (1.3ms)[0m  SELECT  1 AS one FROM "questions" WHERE "questions"."title" = 'Blahaalhdslafhodsofahdohiohi' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mQuestion Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "questions" WHERE "questions"."title" = 'Blahaalhdslafhodsofahdohiohi' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered questions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 42ms (Views: 15.7ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/questions" for ::1 at 2015-06-25 13:01:53 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aB7elTWtDw6DdcXU033pRa2KHhr/pH9uIKhb9gmWn6Jp/CTMUZ9iqFbLDI87eYEK4F8441e5IuyQ3verc8yxRw==", "question"=>{"title"=>"Blahaalhoasfhodshfopahsdofh9ashd9fh9dsahf9phd9saf9udh9asfh9dsfoiausdofoihdashfodslafhodsofahdohiohi", "description"=>"saofhdohafahfodhsoiafhzoduhafhidpuhfasipuhsdifi9uasdpuifhs9apudh9f9pudhsipufahi9dpgfiasdghipfghadsigfidsgaiufgdiafgidghfiagsdiofhsz"}, "commit"=>"Submit Question"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mQuestion Exists (0.3ms)[0m  SELECT  1 AS one FROM "questions" WHERE "questions"."title" = 'Blahaalhoasfhodshfopahsdofh9ashd9fh9dsahf9phd9saf9udh9asfh9dsfoiausdofoihdashfodslafhodsofahdohiohi' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mQuestion Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "questions" WHERE "questions"."title" = 'Blahaalhoasfhodshfopahsdofh9ashd9fh9dsahf9phd9saf9udh9asfh9dsfoiausdofoihdashfodslafhodsofahdohiohi' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered questions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 34ms (Views: 28.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/questions" for ::1 at 2015-06-25 13:02:03 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nRFWKyOKXBKZ/OhyVRdbpqEfH45udw0OtziORUh+X26c86xyR7gxtExCISm9EzPp7Mo5d8ZqUIwHTiIYMiRxiw==", "question"=>{"title"=>"Blahaalhoasfhodshfopahsdofh9ashd9fh9dsahf9phd9saf9udh9asfh9dsfoiausdofoihdashfodslafhodsofahdohiohi", "description"=>"saofhdohafahldhaof;ihdsohfoaida;fdzfonjkldosunjkldfaonjkfdsnkjldfssnjkldfszdnsjklaofphdsofhaosefodhsoiafhzoduhafhidpuhfasipuhsdifi9uasdpuifhs9apudh9f9pudhsipufahi9dpgfiasdghipfghadsigfidsgaiufgdiafgidghfiagsdiofhsz"}, "commit"=>"Submit Question"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mQuestion Exists (0.4ms)[0m  SELECT  1 AS one FROM "questions" WHERE "questions"."title" = 'Blahaalhoasfhodshfopahsdofh9ashd9fh9dsahf9phd9saf9udh9asfh9dsfoiausdofoihdashfodslafhodsofahdohiohi' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Blahaalhoasfhodshfopahsdofh9ashd9fh9dsahf9phd9saf9udh9asfh9dsfoiausdofoihdashfodslafhodsofahdohiohi"], ["description", "saofhdohafahldhaof;ihdsohfoaida;fdzfonjkldosunjkldfaonjkfdsnkjldfssnjkldfszdnsjklaofphdsofhaosefodhsoiafhzoduhafhidpuhfasipuhsdifi9uasdpuifhs9apudh9f9pudhsipufahi9dpgfiasdghipfghadsigfidsgaiufgdiafgidghfiagsdiofhsz"], ["created_at", "2015-06-25 17:02:03.143412"], ["updated_at", "2015-06-25 17:02:03.143412"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mQuestion Exists (0.7ms)[0m  SELECT  1 AS one FROM "questions" WHERE ("questions"."title" = 'Blahaalhoasfhodshfopahsdofh9ashd9fh9dsahf9phd9saf9udh9asfh9dsfoiausdofoihdashfodslafhodsofahdohiohi' AND "questions"."id" != 7) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/" for ::1 at 2015-06-25 13:02:03 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.6ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/questions/7" for ::1 at 2015-06-25 13:02:07 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" ASC LIMIT 1  [["question_id", 7]]
+  Rendered questions/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/questions/7" for ::1 at 2015-06-25 13:02:11 -0400
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fsoqorwOHyQIH/MiiafyR1EcNCs9zf6qXxNkcIPIQJ9/KND72Dxygt2hOnlho5oIHMkS0pXQoyjvZcgt+ZJueg==", "id"=>"7"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/questions
+Completed 302 Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/questions" for ::1 at 2015-06-25 13:02:11 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/new" for ::1 at 2015-06-25 13:04:15 -0400
+Processing by QuestionsController#new as HTML
+  Rendered questions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 30ms (Views: 21.7ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/questions" for ::1 at 2015-06-25 13:05:28 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kaoIaro+KARw8CstQq50jgJnKGXsJK3mTpFqA2Ai5ueQSPIz3gxFoqVO4naqqhzBT7IOnEQ58GT+58ZeGnjIAg==", "question"=>{"title"=>"This is a crazy a really crazy title and I hope that is work because this is bullshit", "description"=>"Man now I have to write like 400 plus things and it is always the problem with these thigns that you have to validate as much as possible"}, "commit"=>"Submit Question"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mQuestion Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "questions" WHERE "questions"."title" = 'This is a crazy a really crazy title and I hope that is work because this is bullshit' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mQuestion Exists (0.3ms)[0m  SELECT  1 AS one FROM "questions" WHERE "questions"."title" = 'This is a crazy a really crazy title and I hope that is work because this is bullshit' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered questions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 30ms (Views: 23.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/questions" for ::1 at 2015-06-25 13:05:59 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AIEw7Yh0fyGboOQg32QazlProYz4G9LoOlVb+ng7KQEBY8q07EYSh04eLXs3YHKBHj6HdVAGj2qKI/enAmEH5A==", "question"=>{"title"=>"This is a crazy a really crazy title and I hope that is work because this is bullshit", "description"=>"Man now I have to write like 400 plus things and it is always the problem with these thigns that you have to validate as much as possible and this isn't enough??!?!? are you fucking kidding me you stupid piece of shit02!!! die!!!!!!!!"}, "commit"=>"Submit Question"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mQuestion Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "questions" WHERE "questions"."title" = 'This is a crazy a really crazy title and I hope that is work because this is bullshit' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "This is a crazy a really crazy title and I hope that is work because this is bullshit"], ["description", "Man now I have to write like 400 plus things and it is always the problem with these thigns that you have to validate as much as possible and this isn't enough??!?!? are you fucking kidding me you stupid piece of shit02!!! die!!!!!!!!"], ["created_at", "2015-06-25 17:05:59.833755"], ["updated_at", "2015-06-25 17:05:59.833755"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mQuestion Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "questions" WHERE ("questions"."title" = 'This is a crazy a really crazy title and I hope that is work because this is bullshit' AND "questions"."id" != 8) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2015-06-25 13:05:59 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questions/8" for ::1 at 2015-06-25 13:06:02 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" ASC LIMIT 1[0m  [["question_id", 8]]
+  Rendered questions/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 32ms (Views: 21.4ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/questions/8/answers" for ::1 at 2015-06-25 13:06:14 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"prmu1/WPPeGbzqPssMnCi+NOlwS3wlWf3v+cD7Mx++6nW1SOkb1QR05wardYzarErpux/R/fCB1uiTBSyWvVCw==", "answer"=>{"body"=>"Ummm wtf"}, "commit"=>"Submit Answer", "question_id"=>"8"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAnswer Exists (0.4ms)[0m  SELECT  1 AS one FROM "answers" WHERE "answers"."body" = 'Ummm wtf' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("body", "question_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Ummm wtf"], ["question_id", 8], ["created_at", "2015-06-25 17:06:14.414122"], ["updated_at", "2015-06-25 17:06:14.414122"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/questions/8
+Completed 302 Found in 8ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/questions/8" for ::1 at 2015-06-25 13:06:14 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" ASC LIMIT 1  [["question_id", 8]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 8]]
+  Rendered questions/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/questions/8/answers" for ::1 at 2015-06-25 13:06:19 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ft/t9bMz8Ee2CB4jI6WQKzpAObgwulZVyY3/CCE5+HwXPRes1wGd4WO213jLofhkd5UfQZinC9d5+1NVW2PWmQ==", "answer"=>{"body"=>"Kaylar is here"}, "commit"=>"Submit Answer", "question_id"=>"8"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAnswer Exists (0.3ms)[0m  SELECT  1 AS one FROM "answers" WHERE "answers"."body" = 'Kaylar is here' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answers" ("body", "question_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Kaylar is here"], ["question_id", 8], ["created_at", "2015-06-25 17:06:19.129008"], ["updated_at", "2015-06-25 17:06:19.129008"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/questions/8
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/questions/8" for ::1 at 2015-06-25 13:06:19 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" ASC LIMIT 1  [["question_id", 8]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 8]]
+  Rendered questions/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/questions/8" for ::1 at 2015-06-25 13:06:24 -0400
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DFuJ5p3BqAbfB1tFvld+TLXWPepdVVUa3TY6k9KjnXUNuXO/+fPFoAq5kh5WUxYD+AMbE/VICJhtQJbOqPmzkA==", "id"=>"8"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 8]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "answers" WHERE "answers"."id" = $1[0m  [["id", 6]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "answers" WHERE "answers"."id" = $1  [["id", 7]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/questions
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/questions" for ::1 at 2015-06-25 13:06:24 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/questions/new" for ::1 at 2015-06-25 13:09:12 -0400
+Processing by QuestionsController#new as HTML
+  Rendered questions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 31ms (Views: 20.9ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/questions" for ::1 at 2015-06-25 13:09:24 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Cq6//uxjHjh93uKSBcmiKOmX0O4ajx2lldU0PG9A9XRyECmn4Ph3jRJstGgE07H7nN5uhB3YfQmIfiNi+ctMA==", "question"=>{"title"=>"idaofdsoyfaodfo;dhsohfodhsaohfdohfaodhsofouahdofh156oausdfoidhsaof489hodus4198aoufd948hoiu498h", "description"=>"osafhoduihfiouadifaisgfi94u8hdsa1o9f6hdos61ahfou1dsopu68f1a9d1hf9823r79g5daisfg1584t52qr7gd468pfag816tarets9fcgas8dgtfregf9dgs97ftewagfbdiygfa89ydefaegw8yfrgw9agf8ydsgafds7fgqwe89fy9dsav8fudhsp8yafg9dsgaifdgiofagds97fyha0sd[ubfihe"}, "commit"=>"Submit Question"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mQuestion Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "questions" WHERE "questions"."title" = 'idaofdsoyfaodfo;dhsohfodhsaohfdohfaodhsofouahdofh156oausdfoidhsaof489hodus4198aoufd948hoiu498h' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "idaofdsoyfaodfo;dhsohfodhsaohfdohfaodhsofouahdofh156oausdfoidhsaof489hodus4198aoufd948hoiu498h"], ["description", "osafhoduihfiouadifaisgfi94u8hdsa1o9f6hdos61ahfou1dsopu68f1a9d1hf9823r79g5daisfg1584t52qr7gd468pfag816tarets9fcgas8dgtfregf9dgs97ftewagfbdiygfa89ydefaegw8yfrgw9agf8ydsgafds7fgqwe89fy9dsav8fudhsp8yafg9dsgaifdgiofagds97fyha0sd[ubfihe"], ["created_at", "2015-06-25 17:09:24.596628"], ["updated_at", "2015-06-25 17:09:24.596628"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mQuestion Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "questions" WHERE ("questions"."title" = 'idaofdsoyfaodfo;dhsohfodhsaohfdohfaodhsofouahdofh156oausdfoidhsaof489hodus4198aoufd948hoiu498h' AND "questions"."id" != 9) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2015-06-25 13:09:24 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questions/9" for ::1 at 2015-06-25 13:09:26 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" ASC LIMIT 1[0m  [["question_id", 9]]
+  Rendered questions/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 32ms (Views: 21.2ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/questions/9/answers" for ::1 at 2015-06-25 13:09:34 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E0z6dFcj/MdiKqoM6z5XIDpTd8bwMw1Ji9fBQE8zLTMSrgAtMxGRYbeUY1cDOj9vd4ZRP1guUMs7oW0dNWkD1g==", "answer"=>{"body"=>"Andrew is the best"}, "commit"=>"Submit Answer", "question_id"=>"9"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAnswer Exists (0.4ms)[0m  SELECT  1 AS one FROM "answers" WHERE "answers"."body" = 'Andrew is the best' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answers" ("body", "question_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Andrew is the best"], ["question_id", 9], ["created_at", "2015-06-25 17:09:34.297250"], ["updated_at", "2015-06-25 17:09:34.297250"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/questions/9
+Completed 302 Found in 7ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/questions/9" for ::1 at 2015-06-25 13:09:34 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" ASC LIMIT 1  [["question_id", 9]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 9]]
+  Rendered questions/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/questions/9/answers" for ::1 at 2015-06-25 13:09:42 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cDYqAbTqY8gE7oGNYsE0ujo3rRNx+SzbWS0F2oG0oDBx1NBY0NgObtFQSNaKxVz1d+KL6tnkcVnpW6mH++6O1Q==", "answer"=>{"body"=>"Kaylar loves cats"}, "commit"=>"Submit Answer", "question_id"=>"9"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAnswer Exists (0.4ms)[0m  SELECT  1 AS one FROM "answers" WHERE "answers"."body" = 'Kaylar loves cats' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answers" ("body", "question_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Kaylar loves cats"], ["question_id", 9], ["created_at", "2015-06-25 17:09:42.989393"], ["updated_at", "2015-06-25 17:09:42.989393"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/questions/9
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/questions/9" for ::1 at 2015-06-25 13:09:42 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" ASC LIMIT 1  [["question_id", 9]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 9]]
+  Rendered questions/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/questions/9/answers" for ::1 at 2015-06-25 13:09:52 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"npjnCcHF8UnhJHh8/YevPDINsUV6qvtPYNfL+SZIqfSfeh1Qpfec7zSasScVg8dzf9iXvNK3ps3QoWekXBKHEQ==", "answer"=>{"body"=>"Jesse and Button are terrorist"}, "commit"=>"Submit Answer", "question_id"=>"9"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAnswer Exists (0.4ms)[0m  SELECT  1 AS one FROM "answers" WHERE "answers"."body" = 'Jesse and Button are terrorist' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answers" ("body", "question_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Jesse and Button are terrorist"], ["question_id", 9], ["created_at", "2015-06-25 17:09:52.571389"], ["updated_at", "2015-06-25 17:09:52.571389"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/questions/9
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/questions/9" for ::1 at 2015-06-25 13:09:52 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" ASC LIMIT 1  [["question_id", 9]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 9]]
+  Rendered questions/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/questions/9" for ::1 at 2015-06-25 13:09:58 -0400
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"u8JsX9cMNZXu91ApQaoJEN5kVvtGAzymzkphgcUyK6O6IJYGsz5YMztJmXKprmFfk7FwAu4eYSR+PM3cv2gFRg==", "id"=>"9"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 9]]
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "answers" WHERE "answers"."id" = $1[0m  [["id", 8]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "answers" WHERE "answers"."id" = $1  [["id", 9]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "answers" WHERE "answers"."id" = $1[0m  [["id", 10]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 9]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/questions
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/questions" for ::1 at 2015-06-25 13:09:58 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/new" for ::1 at 2015-06-25 13:10:17 -0400
+Processing by QuestionsController#new as HTML
+  Rendered questions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 26ms (Views: 18.0ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/questions" for ::1 at 2015-06-25 13:10:30 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rbnlxAl+yyApw/ie5vRBmQe2wPK+/8PEPzV5yV1pVtKsWx+dbUymhvx9McUO8CnWSmPmCxbinkaPQ9WUJzN4Nw==", "question"=>{"title"=>"fhuidhofadsohf9asdh9fh9[dhf9yd9af9er90w8f908dsahoifhdsoiufah9dsuhf9ewqhf8hgdsafhd[sa8h", "description"=>"[aioyfh9udeahf9ed9faherhouhfsodhoafdlsjfoidahsfosd;kljfa;dskfhpduojafdhlkfjhewp9ufypdsjafdnj;fhwer9qrtyda7psfudbjkafher9upq3tyr0d7s8agfdijghfe70rtSD*)&gyfbdijsfrgre87q60rdgas8yfpgxf;iuegqwpre78yx"}, "commit"=>"Submit Question"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mQuestion Exists (0.9ms)[0m  SELECT  1 AS one FROM "questions" WHERE "questions"."title" = 'fhuidhofadsohf9asdh9fh9[dhf9yd9af9er90w8f908dsahoifhdsoiufah9dsuhf9ewqhf8hgdsafhd[sa8h' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "fhuidhofadsohf9asdh9fh9[dhf9yd9af9er90w8f908dsahoifhdsoiufah9dsuhf9ewqhf8hgdsafhd[sa8h"], ["description", "[aioyfh9udeahf9ed9faherhouhfsodhoafdlsjfoidahsfosd;kljfa;dskfhpduojafdhlkfjhewp9ufypdsjafdnj;fhwer9qrtyda7psfudbjkafher9upq3tyr0d7s8agfdijghfe70rtSD*)&gyfbdijsfrgre87q60rdgas8yfpgxf;iuegqwpre78yx"], ["created_at", "2015-06-25 17:10:30.268039"], ["updated_at", "2015-06-25 17:10:30.268039"]]
+  [1m[35m (2.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mQuestion Exists (0.4ms)[0m  SELECT  1 AS one FROM "questions" WHERE ("questions"."title" = 'fhuidhofadsohf9asdh9fh9[dhf9yd9af9er90w8f908dsahoifhdsoiufah9dsuhf9ewqhf8hgdsafhd[sa8h' AND "questions"."id" != 10) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/" for ::1 at 2015-06-25 13:10:30 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/10" for ::1 at 2015-06-25 13:10:55 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" ASC LIMIT 1  [["question_id", 10]]
+  Rendered questions/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 39ms (Views: 28.4ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/questions/10/answers" for ::1 at 2015-06-25 13:11:00 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WBX2aJ2wMawD50z1xI0gay5T4BQHgPKS99858/eHPRlZ9wwx+YJcCtZZha4siUgkY4bG7a+drxBHqZWujd0T/A==", "answer"=>{"body"=>"another test"}, "commit"=>"Submit Answer", "question_id"=>"10"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mAnswer Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "answers" WHERE "answers"."body" = 'another test' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("body", "question_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["body", "another test"], ["question_id", 10], ["created_at", "2015-06-25 17:11:00.267069"], ["updated_at", "2015-06-25 17:11:00.267069"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/questions/10
+Completed 302 Found in 7ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/questions/10" for ::1 at 2015-06-25 13:11:00 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" ASC LIMIT 1[0m  [["question_id", 10]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 10]]
+  Rendered questions/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/questions/10/answers" for ::1 at 2015-06-25 13:11:04 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XWdXNuyCcNJi0eovic/3Tzu6dJf28//SVYm1Qruht7tcha1viLAddLdvI3Rhy58Adm9Sbl7uolDl/xkfwfuZXg==", "answer"=>{"body"=>"what the fuck"}, "commit"=>"Submit Answer", "question_id"=>"10"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mAnswer Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "answers" WHERE "answers"."body" = 'what the fuck' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("body", "question_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["body", "what the fuck"], ["question_id", 10], ["created_at", "2015-06-25 17:11:04.346593"], ["updated_at", "2015-06-25 17:11:04.346593"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/questions/10
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/questions/10" for ::1 at 2015-06-25 13:11:04 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" ASC LIMIT 1[0m  [["question_id", 10]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 10]]
+  Rendered questions/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/questions/10" for ::1 at 2015-06-25 13:11:07 -0400
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8RBl0G4Pm6TIaM1v+5RNzYCfoR9pN2iBwdh/NAgUlCvw8p+JCj32Ah3WBDQTkCWCzUqH5sEqNQNxrtNpck66zg==", "id"=>"10"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 10]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "answers" WHERE "answers"."id" = $1  [["id", 11]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "answers" WHERE "answers"."id" = $1[0m  [["id", 12]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = $1  [["id", 10]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/questions
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/questions" for ::1 at 2015-06-25 13:11:07 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-06-25 13:13:03 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 29ms (Views: 23.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/questions/new" for ::1 at 2015-06-25 13:13:56 -0400
+Processing by QuestionsController#new as HTML
+  Rendered questions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 19ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/questions" for ::1 at 2015-06-25 13:14:02 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o/dqeUOYmMd6i/MkUXeDL2l6+nJKEfqn7ftzx46gszdA+G7ME/lHxzqquTFe25d7uxWakQPNunZf48XXcj9c5Q==", "question"=>{"title"=>"hoidfhofyds0fosahfo9dsoafosadf90do0usaoifudoisuo[i", "description"=>"as[ofhdopusahfodshofuaodofijdaos[fjodihaofhdofal;ksdjflkjdaslfhldhsafodhoahophop"}, "commit"=>"Submit Question"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mQuestion Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "questions" WHERE "questions"."title" = 'hoidfhofyds0fosahfo9dsoafosadf90do0usaoifudoisuo[i' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mQuestion Exists (0.3ms)[0m  SELECT  1 AS one FROM "questions" WHERE "questions"."title" = 'hoidfhofyds0fosahfo9dsoafosadf90do0usaoifudoisuo[i' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered questions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 58ms (Views: 50.8ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/questions" for ::1 at 2015-06-25 13:14:08 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IzHZF3FrfHtB7ihzzTYjsWIwskeGNxNrjtPJhydLQmPAPt2iIQqjewHPYmbCmjflsF/SpM/rU7o8y3+X29StsQ==", "question"=>{"title"=>"hoidfhofyds0fosahfo9dsoafosadf90do0usaoifudoisuo[i", "description"=>"as[ofhdopusahrafgdafssdfasdfdsafdafdsafdsfdsafdafrdcscrcdfodshofuaodofijdaos[fjodihaofhdofal;ksdjflkjdaslfhldhsafodhoahophop"}, "commit"=>"Submit Question"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mQuestion Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "questions" WHERE "questions"."title" = 'hoidfhofyds0fosahfo9dsoafosadf90do0usaoifudoisuo[i' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mQuestion Exists (0.3ms)[0m  SELECT  1 AS one FROM "questions" WHERE "questions"."title" = 'hoidfhofyds0fosahfo9dsoafosadf90do0usaoifudoisuo[i' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered questions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 24ms (Views: 17.7ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/questions" for ::1 at 2015-06-25 13:14:13 -0400
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xfosmpzNQWGh+nRsbUAXI546W8956MS5C6YuxQQ+Agcm9SgvzKyeYeHbPnli7AN3TFU7LDA0hGi5vpjV+KHt1Q==", "question"=>{"title"=>"hoidfhofyds0fosahfo9dsoafosadf90do0usaoifudoisuo[i", "description"=>"as[ofhdopudafgdsfadafzdsfadfd4asf5dsrtafdf6adrfasdrecfdsfr6edcasdfsda5frfdasr6efasdfdafsahrafgdafssdfasdfdsafdafdsafdsfdsafdafrdcscrcdfodshofuaodofijdaos[fjodihaofhdofal;ksdjflkjdaslfhldhsafodhoahophop"}, "commit"=>"Submit Question"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mQuestion Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "questions" WHERE "questions"."title" = 'hoidfhofyds0fosahfo9dsoafosadf90do0usaoifudoisuo[i' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "questions" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "hoidfhofyds0fosahfo9dsoafosadf90do0usaoifudoisuo[i"], ["description", "as[ofhdopudafgdsfadafzdsfadfd4asf5dsrtafdf6adrfasdrecfdsfr6edcasdfsda5frfdasr6efasdfdafsahrafgdafssdfasdfdsafdafdsafdsfdsafdafrdcscrcdfodshofuaodofijdaos[fjodihaofhdofal;ksdjflkjdaslfhldhsafodhoahophop"], ["created_at", "2015-06-25 17:14:13.895530"], ["updated_at", "2015-06-25 17:14:13.895530"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mQuestion Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "questions" WHERE ("questions"."title" = 'hoidfhofyds0fosahfo9dsoafosadf90do0usaoifudoisuo[i' AND "questions"."id" != 11) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2015-06-25 13:14:13 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/questions/11" for ::1 at 2015-06-25 13:14:15 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" ASC LIMIT 1[0m  [["question_id", 11]]
+  Rendered questions/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 30ms (Views: 19.2ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/questions/11/answers" for ::1 at 2015-06-25 13:14:18 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xim1ePzJQx1Qtr3nQeA7R+5Ulc8TnnmwIfSsJ2AoAtm9JrHNrKicHRCX9/JOTC8TPDv1LFpCOWGT7Bo3nLftCw==", "answer"=>{"body"=>"this sucks"}, "commit"=>"Submit Answer", "question_id"=>"11"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAnswer Exists (0.4ms)[0m  SELECT  1 AS one FROM "answers" WHERE "answers"."body" = 'this sucks' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answers" ("body", "question_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "this sucks"], ["question_id", 11], ["created_at", "2015-06-25 17:14:18.223618"], ["updated_at", "2015-06-25 17:14:18.223618"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/questions/11
+Completed 302 Found in 7ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/questions/11" for ::1 at 2015-06-25 13:14:18 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" ASC LIMIT 1  [["question_id", 11]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 11]]
+  Rendered questions/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/questions/11/answers" for ::1 at 2015-06-25 13:14:20 -0400
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ROE8fQ0uATCECkf0chc0vo9gtigu1CNpRm/flK5Mi+2n7jjIXU/eMMQrDeF9uyDqXQ/Wy2cIY7j0d2mEUtNkPw==", "answer"=>{"body"=>"wtf"}, "commit"=>"Submit Answer", "question_id"=>"11"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAnswer Exists (0.4ms)[0m  SELECT  1 AS one FROM "answers" WHERE "answers"."body" = 'wtf' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("body", "question_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "wtf"], ["question_id", 11], ["created_at", "2015-06-25 17:14:20.136215"], ["updated_at", "2015-06-25 17:14:20.136215"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/questions/11
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/questions/11" for ::1 at 2015-06-25 13:14:20 -0400
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."question_id" = $1  ORDER BY "answers"."id" ASC LIMIT 1  [["question_id", 11]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 11]]
+  Rendered questions/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/questions/11" for ::1 at 2015-06-25 13:14:23 -0400
+Processing by QuestionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xQoaZbPLnVU9MJD7W2B7/ZB5k2YDVrVYhKiUDo9/7PImBR7Q46pCVX0R2u5UzG+pQhbzhUqK9Yk2sCIec+ADIA==", "id"=>"11"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1  [["question_id", 11]]
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "answers" WHERE "answers"."id" = $1[0m  [["id", 13]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "answers" WHERE "answers"."id" = $1  [["id", 14]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 11]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/questions
+Completed 302 Found in 7ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/questions" for ::1 at 2015-06-25 13:14:23 -0400
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/questions" for ::1 at 2015-06-25 13:14:37 -0400
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered questions/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-06-25 13:14:37 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-25 13:14:37 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-06-25 13:14:37 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-06-25 13:14:37 -0400

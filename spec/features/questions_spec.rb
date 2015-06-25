@@ -63,16 +63,6 @@ feature 'user posts a question', %Q{
   end
 end
 
-# As a user
-# I want to edit a question
-# So that I can correct any mistakes or add updates
-#
-# Acceptance Criteria
-#
-# - I must provide valid information
-# - I must be presented with errors if I fill out the form incorrectly
-# - I must be able to get to the edit page from the question details page
-
 
 feature 'user edits a question', %Q{
   As a user
@@ -89,8 +79,35 @@ feature 'user edits a question', %Q{
     fill_in "Description", with: question.description
     click_button "Submit Question"
 
-
     expect(page).to have_content(question.title)
+
+  end
+end
+
+
+# As a user
+# I want to delete a question
+# So that I can delete duplicate questions
+#
+# Acceptance Criteria
+#
+# - I must be able delete a question from the question edit page
+# - I must be able delete a question from the question details page
+# - All answers associated with the question must also be deleted
+
+feature 'user deletes a question', %Q{
+  As a user
+  I want to delete a question and its answers
+  So that I can delete duplicate questions
+} do
+
+  scenario 'user deletes a submitted question' do
+    question = FactoryGirl.create(:question)
+
+    visit question_path(question)
+    click_button "Delete Question"
+
+    expect(page).to have_content("Questions")
 
   end
 end

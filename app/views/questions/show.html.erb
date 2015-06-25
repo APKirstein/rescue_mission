@@ -10,6 +10,7 @@
 <% end %>
 
 <%= link_to "Update Question", edit_question_path %>
+<%= button_to("Delete Question", {:controller => :questions, :action => :destroy, :id => @question.id},  method: :delete, data: { confirm: "Are you sure?" }) %>
 
 <ul>
   <% unless @answers.first.nil? %>
